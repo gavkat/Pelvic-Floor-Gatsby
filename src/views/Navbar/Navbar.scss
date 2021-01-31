@@ -1,6 +1,10 @@
 // Styling for the navbar
+nav.navbar-root {
+  flex-direction: column;
+}
+
 .navbar-root {
-  background-color: $gray-900;
+  background-color: $bg-primary;
   .navbar-toggler {
     font-size: 12px;
     right: 0;
@@ -12,14 +16,30 @@
     @include heading-font;
   }
   .navbar-brand {
-    color: $primary !important;
-    @include script-font;
+    font-size: 1rem;
+    color: $text-secondary !important;
+    @include heading-font;
     &.active,
     &:active,
     &:focus,
     &:hover {
-      color: darken($primary, 10%);
+      color: darken($text-secondary, 10%);
     }
+
+    .navbar-sub {
+      font-size: 1rem;
+      white-space: break-spaces;
+    }
+  }
+
+  .navbar-logo {
+    flex: 0 0 60px;
+    max-width: 60px;
+    white-space:unset;
+  }
+
+  .navbar-title {
+    white-space: break-spaces;
   }
 }
 @media (min-width: 992px) {
@@ -30,7 +50,6 @@
     -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
     transition: padding-top 0.3s, padding-bottom 0.3s;
     border: none;
-    background-color: transparent;
     .navbar-brand {
       font-size: 1.75em;
       -webkit-transition: all 0.3s;
@@ -40,7 +59,7 @@
     &.navbar-shrink {
       padding-top: 0;
       padding-bottom: 0;
-      background-color: $gray-900;
+      background-color: $bg-primary;
       .navbar-brand {
         font-size: 1.25em;
         padding: 12px 0;

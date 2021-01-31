@@ -1,12 +1,9 @@
 ---
-copyright: "Copyright © Start Bootstrap 2020"
+copyright: "Copyright © Pelvic Floor Physiotherapy 2021"
 social: {
-  twitter: "#",
-  facebook: "#",
-  medium: "#"
 }
-privacyText: "Privacy Policy"
-privacyHref: "#!"
-termsText: "Terms of Use"
-termsHref: "#!"
+privacyText: ""
+privacyHref: ""
+termsText: ""
+termsHref: ""
 ---

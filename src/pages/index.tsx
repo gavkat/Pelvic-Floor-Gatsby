@@ -56,7 +56,6 @@ const IndexPage = ({ data }) => {
         // dynamically import sections
         nodes
           .map((node) => fileToComponentName(node.fields.fileName))
-          .filter((x) => x)
           .map((sectionComponentName, ind) => {
             const SectionComponent = Sections[sectionComponentName];
             return SectionComponent ? (

@@ -11,6 +11,7 @@ const TeamMember = ({
   imageAlt,
   header,
   subheader,
+  content,
   social: { twitter, facebook, linkedin, github, medium },
 }) => {
   const twitterPart = twitter ? <SocialIcons.Twitter userName={twitter} /> : null;
@@ -28,6 +29,7 @@ const TeamMember = ({
       />
       <h4>{header}</h4>
       <p className="text-muted">{subheader}</p>
+      <p className="text">{content}</p>
       <div>
         {twitterPart}
         {facebookPart}

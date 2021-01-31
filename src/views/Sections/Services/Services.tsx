@@ -21,6 +21,7 @@ const Services = ({ className }) => {
             content
             header
             iconName
+            contentDetailed
           }
         }
       }
@@ -40,9 +41,9 @@ const Services = ({ className }) => {
         <SectionHeader header={rootHeader} subheader={rootSubHeader} />
       </Row>
       <Row className="text-center">
-        {services.map(({ header, content, iconName }) => (
-          <Col md={4} key={header}>
-            <ServiceItem iconName={iconName} header={header} content={content} />
+        {services.map(({ header, content, iconName, contentDetailed }) => (
+          <Col md={6} key={header}>
+            <ServiceItem iconName={iconName} header={header} content={content} contentDetailed={contentDetailed} />
           </Col>
         ))}
       </Row>

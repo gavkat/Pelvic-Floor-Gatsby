@@ -1,9 +1,13 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 import Image from "components/Image";
 
-const Client = ({ imageFileName, href }) => {
+interface Props {
+  imageFileName: string;
+  href?: string;
+}
+
+const Client: React.FC<Props> = ({ imageFileName, href = null }) => {
   const imgPart = (
     <Image className="img-fluid d-block mx-auto" fileName={imageFileName} alt={imageFileName} />
   );
@@ -17,15 +21,6 @@ const Client = ({ imageFileName, href }) => {
   }
 
   return imgPart;
-};
-
-Client.propTypes = {
-  imageFileName: PropTypes.string.isRequired,
-  href: PropTypes.string,
-};
-
-Client.defaultProps = {
-  href: null,
 };
 
 export default Client;

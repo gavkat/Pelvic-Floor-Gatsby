@@ -15,6 +15,10 @@ const PortfolioDetailDialog = ({
   extraInfo,
   ...restProps
 }) => {
+  const createMarkup = (content) => {
+    return { __html: content };
+  }
+
   return (
     <Modal
       {...restProps}
@@ -28,19 +32,14 @@ const PortfolioDetailDialog = ({
       </Modal.Header>
       <Modal.Body className="mx-auto">
         <p className="item-intro text-muted">{subheader}</p>
-        <Image
-          className="img-fluid d-block"
-          fileName={imageFileName}
-          alt={imageAlt || header || subheader}
-        />
-        <p>{content}</p>
+        <div dangerouslySetInnerHTML={createMarkup(content)}></div>
         {extraInfo}
       </Modal.Body>
       <Modal.Footer>
         <div className="mx-auto">
-          <Button variant="primary" onClick={onHide}>
+          <Button variant="secondary" onClick={onHide}>
             <Icon iconName="CloseIcon" />
-            &nbsp; Close Project
+            &nbsp; Close
           </Button>
         </div>
       </Modal.Footer>

@@ -40,7 +40,13 @@ module.exports = {
         path: `${__dirname}/content/assets/images`,
       },
     },
-    "gatsby-plugin-eslint",
+    {
+      resolve: 'gatsby-plugin-tslint',
+      options: {
+        test: /\.ts$|\.tsx$/,
+        exclude: /(node_modules|cache|public)/
+      }
+    },
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",

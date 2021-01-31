@@ -1,51 +1,68 @@
+.image-card-logo {
+  flex: 0 0 150px;
+  max-width: 150px;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
 .image-card {
   height: 491px;
   .image {
     height: 491px;
+    opacity: 0.4;
   }
   .no-padding {
     padding: 0;
   }
   .intro-text {
-    padding-top: 150px;
+    padding-top: 100px;
     padding-bottom: 100px;
     .intro-lead-in {
-      font-size: 22px;
-      font-style: italic;
-      line-height: 22px;
+      font-size: 26px;
+      line-height: 32px;
       margin-bottom: 25px;
-      @include serif-font;
+      color: $text-secondary;
+      @include heading-font;
     }
     .intro-heading {
       font-size: 50px;
       font-weight: 700;
       line-height: 50px;
       margin-bottom: 25px;
+      color: $text-secondary;
       @include heading-font;
     }
   }
 }
 @media (min-width: 768px) {
+  .image-card-logo {
+    flex: 0 0 200px;
+    max-width: 200px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
   .image-card {
     height: 759px;
     .image {
       height: 759px;
     }
     .intro-text {
-      padding-top: 300px;
+      padding-top: 150px;
       padding-bottom: 200px;
       .intro-lead-in {
         font-size: 40px;
-        font-style: italic;
         line-height: 40px;
         margin-bottom: 25px;
-        @include serif-font;
+        color: $text-secondary;
+        @include heading-font;
       }
       .intro-heading {
         font-size: 75px;
         font-weight: 700;
         line-height: 75px;
         margin-bottom: 50px;
+        color: $text-secondary;
         @include heading-font;
       }
     }

@@ -22,6 +22,7 @@ const Team = ({ className }) => {
             header
             imageFileName
             subheader
+            content
             social {
               facebook
               github
@@ -55,7 +56,7 @@ const Team = ({ className }) => {
       </Row>
       <Row>
         {teammember.map(({ header, ...tmProps }) => (
-          <Col sm={4} key={header}>
+          <Col sm={6} key={header}>
             <TeamMember header={header} {...tmProps} />
           </Col>
         ))}
